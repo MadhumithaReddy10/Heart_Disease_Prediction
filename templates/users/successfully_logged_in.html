@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Centering and Styling the Body */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+            background-color: #f4f4f4; /* Light background color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+
+        /* Container for the welcome message */
+        .welcome-container {
+            text-align: center; /* Center the text */
+            padding: 40px; /* Padding inside the container */
+            border: 1px solid #ccc; /* Border around the message */
+            border-radius: 10px; /* Rounded corners */
+            background-color: #28a745; /* Green background */
+            color: white; /* White text color for contrast */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            width: 300px; /* Fixed width for the container */
+        }
+
+        /* Heading style */
+        h2 {
+            font-size: 2rem; /* Font size for the heading */
+            margin-bottom: 20px; /* Space below the heading */
+        }
+
+        /* Paragraph style */
+        p {
+            font-size: 1.2rem; /* Font size for the paragraph */
+            margin-top: 10px; /* Space above the paragraph */
+        }
+
+        /* Link style */
+        a {
+            display: inline-block; /* Make the link a block element */
+            margin-top: 20px; /* Space above the link */
+            font-size: 1rem; /* Font size for the link */
+            color: white; /* White link color */
+            text-decoration: none; /* No underline */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <h2>Welcome!</h2>
+        <p>You have successfully logged in.</p>
+        <a href="{% url 'home' %}">Go to Home</a> <!-- Link to the home page -->
+    </div>
+</body>
+</html>

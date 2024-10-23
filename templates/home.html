@@ -1,0 +1,78 @@
+<!-- users/templates/users/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+            background-color: #f4f4f4; /* Light background color */
+            font-family: Arial, sans-serif; /* Font family */
+            color: #333; /* Default text color */
+        }
+
+        /* Container for the content */
+        .container {
+            background-color: #ffffff; /* White background for the box */
+            padding: 40px; /* Padding inside the box */
+            border-radius: 5px; /* Slightly rounded corners for a softer look */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            text-align: center; /* Center text inside the box */
+            width: 500px; /* Fixed width for the box */
+            height: 300px; /* Fixed height for the box */
+        }
+
+        /* Main title styling */
+        h1 {
+            font-size: 2.5rem; /* Large font size for the title */
+            color: #007bff; /* Blue color for the title */
+            margin-bottom: 10px; /* Space below the title */
+        }
+
+        /* Subtitle styling */
+        p {
+            font-size: 1.5rem; /* Font size for subtitles */
+            margin-bottom: 30px; /* Space below the subtitle */
+            color: #555; /* Gray color for the subtitle */
+        }
+
+        /* Link styling */
+        a {
+            color: #007bff; /* Link color */
+            font-size: 1.2rem; /* Font size for links */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        /* Container for links */
+        .link-container {
+            margin-top: 20px; /* Space above link container */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Disease Prediction</h1>
+        <p>"Heart Disease Predictor"</p>
+        <div class="link-container">
+            <p><a href="{% url 'login' %}">Login</a> <br> OR <br> <a href="{% url 'register' %}">Register</a></p>
+        </div>
+    </div>
+</body>
+</html>

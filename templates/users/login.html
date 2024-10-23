@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Centering and Styling the Body */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+            background-color: #f4f4f4; /* Light background color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+
+        /* Container for the login form */
+        .login-container {
+            text-align: center; /* Center the text */
+            padding: 40px; /* Padding inside the container */
+            border: 1px solid #ccc; /* Border around the form */
+            border-radius: 10px; /* Rounded corners */
+            background-color: #fff; /* White background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            width: 300px; /* Fixed width for the container */
+        }
+
+        /* Heading style */
+        h2 {
+            font-size: 3rem; /* Font size for the heading */
+            margin-bottom: 10px; /* Space below the heading */
+        }
+
+        /* Input field styling */
+        input[type="text"], input[type="password"] {
+            padding: 8px; /* Padding inside input fields */
+            font-size: 1rem; /* Font size for input fields */
+            margin-bottom: 10px; /* Space below each input field */
+            width: 100%; /* Full width of the container */
+            border: 1px solid #ccc; /* Border color */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        /* Button style */
+        button {
+            padding: 10px 20px; /* Adjust padding to reduce size */
+            font-size: 1rem; /* Set a smaller font size */
+            cursor: pointer; /* Change cursor to pointer */
+            background-color: #007bff; /* Button background color */
+            color: white; /* Button text color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+            margin-top: 4px;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+
+        /* Paragraph style */
+        p {
+            font-size: 1rem; 
+            margin-top: 20px; 
+        }
+
+        a {
+            color: #007bff; /* Link color */
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <h4>Enter your details to login</h4>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }} <!-- Renders the form fields -->
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+    </div>
+</body>
+</html>
