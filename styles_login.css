@@ -1,0 +1,124 @@
+/* General reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("{% static 'login_bg.jpg' %}") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Login container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Login card */
+.login-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Title styling */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Form group styling */
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+form p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Input fields */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #2575fc;
+    outline: none;
+}
+
+/* Button styling */
+button.btn {
+    background-color: #2575fc;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.btn:hover {
+    background-color: #6a11cb;
+    transform: scale(1.05);
+}
+
+button.btn:active {
+    transform: scale(1);
+}
+
+/* Links styling */
+.links p {
+    margin-top: 20px;
+    color: #666;
+    font-size: 1rem;
+}
+
+.links a {
+    color: #2575fc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    button.btn {
+        padding: 10px;
+    }
+}
