@@ -1,78 +1,86 @@
-<!-- users/templates/users/home.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Heart Disease Predictor</title>
     <style>
-        /* Basic Reset */
-        * {
-            box-sizing: border-box;
+        /* Reset body margin and padding */
+        body {
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg'); /* Set background image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
         }
 
-        /* Body styling */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Full height of the viewport */
-            background-color: #f4f4f4; /* Light background color */
-            font-family: Arial, sans-serif; /* Font family */
-            color: #333; /* Default text color */
-        }
-
-        /* Container for the content */
+        /* Container for Heart Disease Predictor */
         .container {
-            background-color: #ffffff; /* White background for the box */
-            padding: 40px; /* Padding inside the box */
-            border-radius: 5px; /* Slightly rounded corners for a softer look */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            text-align: center; /* Center text inside the box */
-            width: 500px; /* Fixed width for the box */
-            height: 300px; /* Fixed height for the box */
+            position: absolute; /* Positions the container relative to the page */
+            top: 50%; /* Vertically centered */
+            left: 20px; /* Aligned to the left */
+            transform: translateY(-50%); /* Center container vertically */
+            width: 280px; /* Reduced width for a compact box */
+            height: auto; /* Height adjusts dynamically based on content */
+            padding: 20px; /* Inner padding for better spacing */
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque white background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow for better visibility */
         }
 
-        /* Main title styling */
+        /* Title Style */
         h1 {
-            font-size: 2.5rem; /* Large font size for the title */
-            color: #007bff; /* Blue color for the title */
-            margin-bottom: 10px; /* Space below the title */
+            text-align: center;
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 20px;
         }
 
-        /* Subtitle styling */
-        p {
-            font-size: 1.5rem; /* Font size for subtitles */
-            margin-bottom: 30px; /* Space below the subtitle */
-            color: #555; /* Gray color for the subtitle */
+        /* Button Styling */
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #007BFF; /* Blue background for buttons */
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
         }
 
-        /* Link styling */
-        a {
-            color: #007bff; /* Link color */
-            font-size: 1.2rem; /* Font size for links */
-            text-decoration: none; /* Remove underline from links */
+        .button:hover {
+            background-color: #0056b3; /* Darker blue when hovered */
         }
 
-        a:hover {
-            text-decoration: underline; /* Underline on hover */
-        }
-
-        /* Container for links */
-        .link-container {
-            margin-top: 20px; /* Space above link container */
+        /* Footer Styling */
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
+    <!-- Container for Heart Disease Prediction -->
     <div class="container">
-        <h1>Heart Disease Prediction</h1>
-        <p>"Heart Disease Predictor"</p>
-        <div class="link-container">
-            <p><a href="{% url 'login' %}">Login</a> <br> OR <br> <a href="{% url 'register' %}">Register</a></p>
-        </div>
+        <h1>Heart Disease Predictor</h1>
+        <!-- Buttons for navigation -->
+        <button class="button" onclick="window.location.href='predict.html'">Predict</button>
+        <button class="button" onclick="window.location.href='about.html'">About</button>
+        <button class="button" onclick="window.location.href='contact.html'">Contact</button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Heart Disease Predictor</p>
     </div>
 </body>
 </html>
